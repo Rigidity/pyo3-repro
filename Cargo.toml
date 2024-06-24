@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = [".", "dep-crate"]
+
+[package]
+name = "pybinding-repro"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "pybinding_repro"
+crate-type = ["cdylib"]
+path = "src/lib.rs"
+
+[dependencies]
+pyo3 = "0.21.2"
+dep-crate = { path = "./dep-crate", features = ["python"] }
