@@ -13,5 +13,5 @@ crate-type = ["cdylib"]
 path = "src/lib.rs"
 
 [dependencies]
-pyo3 = "0.21.2"
+pyo3 = { version = "0.21.2", features = ["multiple-pymethods"] }
 dep-crate = { path = "./dep-crate", features = ["python"] }
